@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Interruptor</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="start">On</string>
+    <string name="stop">Off</string>
+</resources>

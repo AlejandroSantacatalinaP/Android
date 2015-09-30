@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CheckBox</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="Text1">Ahora no estoy clicado</string>
+    <string name="Text2">Ahora si!</string>
+</resources>
