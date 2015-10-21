@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PopupMenu</string>
+
+    <string name="item1">Primera opción</string>
+    <string name="item2">Segunda opción</string>
+    <string name="action_settings">Settings</string>
+</resources>
