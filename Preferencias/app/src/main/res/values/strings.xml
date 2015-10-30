@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Preferencias</string>
+
+    <string name="button_text">Guardar preferencias</string>
+    <string name="button2_text">Recuperar preferencias</string>
+    <string name="action_settings">Settings</string>
+</resources>
