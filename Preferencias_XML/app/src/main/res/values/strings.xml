@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Preferencias_XML</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="pref1">Preferencia Check</string>
+    <string name="pref2">Preferencia Edit</string>
+
+    <string name="pref1_summ">Este seria un resumen de la preferencia de check</string>
+</resources>
