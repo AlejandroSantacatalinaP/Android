@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
 
@@ -14,12 +19,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         dbAdapter = new MyDBAdapter(this);
         dbAdapter.open();
 
-        dbAdapter.insertarDisco("Redeemer of Souls", 2014);
-        dbAdapter.insertarDisco("Land of the Free", 1995);
+        TextView textView = (TextView) this.findViewById(R.id.textView);
+        TextView textView2 = (TextView) this.findViewById(R.id.textView2);
+
+        ArrayList<String> discos = dbAdapter.recuperarTodo();
+        textView.setText(discos.get(0));
+        textView2.setText(discos.get(1));
 
     }
 

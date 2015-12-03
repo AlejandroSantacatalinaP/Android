@@ -2,9 +2,12 @@ package com.example.jmalberola.dbdiscos;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
 
 /**
  * Created by jmalberola.
@@ -51,7 +54,20 @@ public class MyDBAdapter {
         //Asignamos los valores de cada campo
         newValues.put(TITLE,t);
         newValues.put(YEAR,y);
-        db.insert(DATABASE_TABLE,null,newValues);
+        db.insert(DATABASE_NAME,null,newValues);
+    }
+
+    public ArrayList<String> recuperarTodo(){
+        ArrayList<String> discos = new ArrayList<String>();
+        //Recuperamos en un cursor la consulta realizada
+        Cursor cursor = db.query(DATABASE_TABLE,null,null,null,null,null,null);
+        //Recorremos el cursor
+        if (cursor != null && cursor.moveToFirst()){
+            do{
+                discos.add(cursor.getString(1)+" "+cursor.getString(2));
+            }while (cursor.moveToNext());
+        }
+        return discos;
     }
 
     private static class MyDbHelper extends SQLiteOpenHelper {
